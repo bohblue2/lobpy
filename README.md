@@ -5,6 +5,14 @@ This python3 package provides tools for a tractable class of models for the limi
 
 [Cont, Mueller (2019): A stochastic partial differential equation model for limit order book dynamics](https://arxiv.org/abs/1904.03058 )
 
+## Installation(osx)
+```
+# latex
+brew cask install mactex
+python -m lobpy -cp "AMZN" "2012-06-21" 34200000 57600000 36000000 55800000 10 10 1800000
+<!-- python -m lobpy -cd "AMZN" "2012-06-21" 34200000 57600000 36000000 55800000 50 20 1980001 180001 180000 0 -->
+python -m lobpy -cd "AMZN" "2012-06-21" 34200000 57600000 36000000 55800000 10 10 1980001 180001 180000 0
+```
 
 ## Code Example
 

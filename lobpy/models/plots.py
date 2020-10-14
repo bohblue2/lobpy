@@ -7,9 +7,10 @@ functions to plot relevant quantities
 
 """
 import matplotlib
+matplotlib.use('macOsX')
 
-matplotlib.rcParams['text.usetex'] = True
-matplotlib.rcParams['text.latex.unicode'] = True
+# matplotlib.rcParams['text.usetex'] = True
+# matplotlib.rcParams['text.latex.unicode'] = True
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -52,7 +53,7 @@ def plot_avprofile_gamma(filename, time_stamps, gammas_bid, gammas_ask, labels_l
     ax1.set_xlabel('time in msec from midnight')
 
     plt.tight_layout()        
-    plt.savefig(filename + '.pdf') 
+    # plt.savefig(filename + '.pdf')
     plt.savefig(filename + '.png')
 
 
@@ -79,7 +80,7 @@ def plot_av_profile(profile_bid, profile_ask, filename, ticker_str, date_str, ti
     
     lgd = ax.legend((rects1[0], rects2[0]), ('Bid', 'Ask'))
 
-    fig.savefig(filename + '.pdf', bbox_extra_artists=(lgd,), bbox_inches='tight') 
+    # fig.savefig(filename + '.pdf', bbox_extra_artists=(lgd,), bbox_inches='tight')
     fig.savefig(filename + '.png', bbox_extra_artists=(lgd,), bbox_inches='tight')
     plt.close(fig)
                  
@@ -181,7 +182,7 @@ def plot_calibration_history_volume(cal_history, filename="calhistoryplot", titl
     axs[num_params].tick_params(axis='x', pad=6)
     axs[num_params].set_xlabel('time in sec from midnight')
     
-    fig.savefig(filename + '.pdf', bbox_extra_artists=(lgd,), bbox_inches='tight') 
+    # fig.savefig(filename + '.pdf', bbox_extra_artists=(lgd,), bbox_inches='tight')
     fig.savefig(filename + '.png', bbox_extra_artists=(lgd,), bbox_inches='tight')
     plt.close(fig)
 
@@ -199,7 +200,7 @@ def plot_bidaskdata(time_grid, data_bid, data_ask, title_str="", filename=""):
     plt.xlabel('time in sec from midnight')
     plt.tight_layout()
     if not (filename == ""):
-        plt.savefig(filename + '.pdf') 
+        # plt.savefig(filename + '.pdf')
         plt.savefig(filename + '.png')
     plt.close(fig)
     return True
@@ -274,6 +275,6 @@ def plot_avprofile_fits(profile_bid, profile_ask, models, labels_leg=["data", "L
     ax1.tick_params(axis='x', pad=6)
     #ax1.set_xlabel('x')
     
-    plt.tight_layout()        
-    plt.savefig(filename + '.pdf') 
+    plt.tight_layout()
+    # plt.savefig(filename + '.pdf')
     plt.savefig(filename + '.png')
